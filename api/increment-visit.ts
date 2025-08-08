@@ -6,12 +6,6 @@ import { getFirestore } from 'firebase-admin/firestore';
 const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT_KEY
   ? JSON.parse(Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_KEY, 'base64').toString('utf8'))
   : null;
-//debug!!!
-console.log('Valor de la variable de entorno:', process.env.FIREBASE_SERVICE_ACCOUNT_KEY ? 'Presente' : 'No presente');
-console.log('¿Se decodificó serviceAccount correctamente?', serviceAccount !== null);
-console.log('¿Es un objeto serviceAccount?', typeof serviceAccount === 'object');
-console.log('ID del proyecto:', serviceAccount?.project_id);
-
 
 
 if (!getApps().length && serviceAccount) {
