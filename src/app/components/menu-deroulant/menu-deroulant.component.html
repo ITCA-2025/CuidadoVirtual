@@ -42,7 +42,8 @@
                 (click)="cerrarVentana()">
                 ← VOLVER
               </button>
-              <h4>Elige tu pregunta: </h4>
+              <h4 class="subcategoria-button">{{ subCategoria.titulo }}</h4>
+              <h4> Elige tu pregunta: </h4>
               <div class="botones-preguntas-container">
                 <ng-container *ngFor="let pr of preguntasAMostrar">
                   <button #botonPregResp [class.activo]="esPreguntaActiva(pr.pregunta)"
