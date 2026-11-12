@@ -18,7 +18,6 @@ import { VisitCounterService } from './services/visit-counter.service';
 export class AppComponent implements OnInit {
   title = 'asistmedic';
   logoSrc: string = 'assets/logo.jpg';
-  logoUssSrc: string = 'assets/logo-uss-vm.jpg';
   visitCount: number = 0;
 
   constructor(public dialog: MatDialog, private visitCounterService: VisitCounterService) { }
